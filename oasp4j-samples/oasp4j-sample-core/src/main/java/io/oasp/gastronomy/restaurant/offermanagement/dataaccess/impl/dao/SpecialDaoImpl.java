@@ -52,7 +52,7 @@ public class SpecialDaoImpl extends ApplicationDaoImpl<SpecialEntity> implements
       query.where(Alias.$(special.getOfferId()).eq(offer));
     }
 
-    // TODO Richtige Lösung?
+    // TODO Richtige Lösung? - TODO Wenn so dann wohl mit "BeanMapper" ;)
     WeeklyPeriodEmbeddable activePeriod = convert(criteria.getActivePeriod());
     if (activePeriod != null) {
       query.where(Alias.$(special.getActivePeriod()).eq(activePeriod));
